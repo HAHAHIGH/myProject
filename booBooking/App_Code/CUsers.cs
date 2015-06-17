@@ -11,4 +11,8 @@ public class CUsers
     public int id { set; get; }
     public string account { set; get; }
     public string password { set; get; }
+    public string address { set; get; }
+    public string phone { set; get; }
+    public string name { set; get; }
+    public string email { set; get; }
 }

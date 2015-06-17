@@ -12,5 +12,6 @@ public class CBook
     public string bookName { set; get; }
     public string bookPrice { set; get; }
     public string bookPhoto { set; get; }
+
     
 }

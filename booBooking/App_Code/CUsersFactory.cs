@@ -36,6 +36,10 @@ public class CUsersFactory
                 user.id = (int)dv.Table.Rows[i]["id"];
                 user.account = dv.Table.Rows[i]["account"].ToString();
                 user.password = dv.Table.Rows[i]["password"].ToString();
+                user.name = dv.Table.Rows[i]["name"].ToString();
+                user.phone = dv.Table.Rows[i]["phone"].ToString();
+                user.email = dv.Table.Rows[i]["email"].ToString();
+                user.address = dv.Table.Rows[i]["address"].ToString();
                 userList.Add(user);
             }
         }
@@ -43,26 +47,6 @@ public class CUsersFactory
     public List<CUsers> getAll()
     {
         return userList;
-    }
-
-    public void addUser(CUsers user)
-    {
-        try
-        {
-            SqlDataSource sds = new SqlDataSource();
-            sds.ConnectionString = connectionString;
-            sds.InsertCommand = "dbo.addUser";
-            sds.InsertCommandType = SqlDataSourceCommandType.StoredProcedure;
-            sds.InsertParameters.Add(new Parameter("UserAccount", DbType.String, user.account));
-            sds.InsertParameters.Add(new Parameter("UserPassword", DbType.String, user.password));
-            sds.Insert();
-
-            message = "add success";
-        }
-        catch (Exception ex)
-        {
-            message = ex.Message;
-        }
     }
 
     public CUsers getByAccount(string account)

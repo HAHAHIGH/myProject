@@ -29,7 +29,7 @@
 
 <body>
     <form id="form1" runat="server">
-    <div style="margin-top:180px">
+    <div style="margin-top:130px">
         <h1 style="text-align: center" class="auto-style1">會員登入</h1>
     </div>
         <div class="login">
@@ -45,20 +45,11 @@
             </span>
             <asp:Label ID="lblMessage" runat="server" ForeColor="Red" Text="您輸入的帳號密碼有誤"></asp:Label>
         </div><br />
-        <div style="text-align:center"><asp:HyperLink ID="hLinkRegister" runat="server" Font-Size="X-Large" ForeColor="ForestGreen" NavigateUrl="~/Register.aspx">成為會員</asp:HyperLink></div>
     <script>
         window.onload = function () {
             document.getElementById("loginName").focus();
         };
     </script>
-        
-    <br /><br />
-
-    <footer class="loginfooter">
-        <div>
-            <p>Trafalgar Law &nbsp;&copy;&nbsp;tel:123456789&nbsp;address:Dressrosa</p>
-        </div>
-    </footer>
     </form>
 </body>
 

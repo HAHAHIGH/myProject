@@ -34,7 +34,7 @@ public class CBookFactory
                 CBook book = new CBook();
                 book.id = (int)dv.Table.Rows[i]["book_id"];
                 book.bookName = dv.Table.Rows[i]["bookName"].ToString();
-                book.bookPrice = dv.Table.Rows[i]["bookPrice"].ToString();
+                book.bookPrice = dv.Table.Rows[i]["price"].ToString();
                 book.bookPhoto = dv.Table.Rows[i]["bookPhoto"].ToString();
                 bookList.Add(book);
             }
@@ -44,5 +44,25 @@ public class CBookFactory
     public List<CBook> getAll()
     {
         return bookList;
+    }
+
+    public int getbookId(string bookName)
+    {
+        for (int i = 0; i < bookList.Count; i++)
+        {
+            if (bookList[i].bookName == bookName)
+                return bookList[i].id;
+        }
+        return 0;
+    }
+
+    public CBook getById(string id)
+    {
+        for (int i = 0; i < bookList.Count; i++)
+        {
+            if (bookList[i].id == Convert.ToInt32(id))
+                return bookList[i];
+        }
+        return null;
     }
 }
