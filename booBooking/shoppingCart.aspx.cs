@@ -13,23 +13,23 @@ public partial class shoppingCart : System.Web.UI.Page
         if (!IsPostBack) 
         {
             cart = Session["cart"] as List<CShoppingCart>;
-            GridView1.DataSource = cart;
-            GridView1.DataBind();
+            GridView2.DataSource = cart;
+            GridView2.DataBind();
         } 
     }
-    protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    protected void GridView2_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
         (Session["cart"] as List<CShoppingCart>).RemoveAt(e.RowIndex);
         refreshGridView();
     }
-
     private void refreshGridView()
     {
-        GridView1.DataSource = Session["cart"];
-        GridView1.DataBind();
+        GridView2.DataSource = Session["cart"];
+        GridView2.DataBind();
     }
     protected void btnCheck_Click(object sender, EventArgs e)
     {
         Response.Redirect("check.aspx");
     }
+    
 }
