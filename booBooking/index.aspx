@@ -6,6 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>購物首頁</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
@@ -57,14 +58,14 @@
         </header>
         <table class="pictureTable">
             <tr>
-                
+
                 <td>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BookdbConnectionString %>" SelectCommand="SELECT * FROM [book]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" style="font-family: 微軟正黑體">
+                    <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" Style="font-family: 微軟正黑體">
                         <ItemTemplate>
                             <div class="col-sm-6 col-md-3" style="width: auto">
                                 <div class="thumbnail" style="text-align: center">
@@ -89,9 +90,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    
-                </td>
+                <td></td>
             </tr>
         </table>
     </form>

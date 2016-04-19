@@ -32,7 +32,7 @@ public partial class index : System.Web.UI.Page
         CBook book = bookFactory.getById(id);
         string price = book.bookPrice;
         string name = book.bookName;
-        string subtotal = (Convert.ToInt32(price) * Convert.ToInt32(count)).ToString();
+        string subtotal = (Convert.ToDouble(price) * Convert.ToInt32(count)).ToString();
 
         shoppingCart.Add(new CShoppingCart() { 書名 = name, 單價 = price, 數量 = count, 小計 = subtotal, 訂購日期 = DateTime.Now.ToString("yyyy/MM/dd") });
 

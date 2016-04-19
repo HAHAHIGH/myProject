@@ -13,7 +13,7 @@ using System.Web.UI.WebControls;
 public class CBookFactory
 {
     List<CBook> bookList = new List<CBook>();
-    string connectionString = WebConfigurationManager.OpenWebConfiguration("/booBooking").ConnectionStrings.ConnectionStrings["BookdbConnectionString"].ConnectionString;
+    String connectionString = @"Data Source=NTHIGH\SQLEXPRESS;Initial Catalog=BookDB;Integrated Security=True";
     public CBookFactory()
 	{
         loadData();

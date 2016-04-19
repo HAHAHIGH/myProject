@@ -40,7 +40,7 @@
                 <input id="loginName" runat="server" name="loginName" placeholder="帳號" spellcheck="false" style="width:40%; font-weight: normal; font-size: large; color: #000000;" value="iii" /><br />                
                 <input id="Passwd" name="Passwd" type="password" placeholder="密碼" style="width:40%; font-weight: normal; font-size: large; color: #000000;" value="password4"/><br />
                 <br />
-                &nbsp;<asp:Button class="btn btn-default" ID="btnSubmit" runat="server" Text="確認" OnClick="btnSubmit_Click" BackColor="#0099FF" BorderStyle="None" Width="40%"/>
+                &nbsp;<asp:Button class="btn btn-default" ID="btnSubmit" runat="server" Text="登入" OnClick="btnSubmit_Click" BackColor="#0099FF" BorderStyle="None" Width="40%" Font-Size="Medium" Font-Bold="true"/>
                 <br />
             </span>
             <asp:Label ID="lblMessage" runat="server" ForeColor="Red" Text="您輸入的帳號密碼有誤"></asp:Label>
